@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Task List </title>
+    </head>
+
+    <body>
+        <ul>
+            <p>{{ object }}</p>
+            <form method = "POST">
+                {% csrf_token %}
+                {{ form.as_div }}
+                <button>Submit</button>
+            </form>
+        </ul>
+    </body>
+</html>
